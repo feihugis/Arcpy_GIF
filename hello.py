@@ -3,13 +3,13 @@ import arcpy
 import FieldOperation
 #import PIL
 
-File_name_path =  "C:\Program Files (x86)\ArcGIS\DeveloperKit10.1\Samples\data\BloomfieldTownship\SchoolTaxDistrict.shp"
+File_name_path =  "C:\Users\Hu Fei\Desktop\Data\BloomfieldTownship\SchoolTaxDistrict.shp"
 Field_name_add = "Other"
 Field_type_add="DOUBLE"
 Field_name_delete = "TRY"
 
-update_table_path = "C:\Program Files (x86)\ArcGIS\DeveloperKit10.1\Samples\data\BloomfieldTownship\SchoolTaxDistrict.shp" 
-input_table_path = 'C:\Users\Administrator\Desktop\data1.csv'
+update_table_path = "C:\Users\Hu Fei\Desktop\Data\\BloomfieldTownship\SchoolTaxDistrict.shp" 
+input_table_path = 'C:\Users\Hu Fei\Desktop\Data\data1.csv'
 Join_field_name = 'FID'
 Add_field_name = 'Other'
 
@@ -19,11 +19,11 @@ FieldOperation.Update_Field_Value(update_table_path, input_table_path, Join_fiel
 
 #FieldOperation.AddFieldValue("C:\Program Files (x86)\ArcGIS\DeveloperKit10.1\Samples\data\BloomfieldTownship\SchoolTaxDistrict.shp", "TRY")
 #arcpy.ZRenderer_stats(File_name_path, "Other", "C:\Users\Administrator\Desktop\hotspot_output_rendered.lyr")
+arcpy.RefreshActiveView()
+arcpy.RefreshTOC()
 
-
-#mxd = arcpy.mapping.MapDocument(r"C:\Users\Administrator\Desktop\123.mxd")
-
-#arcpy.mapping.ExportToGIF(mxd, r"C:\Users\Administrator\Desktop\1234.gif")
+mxd = arcpy.mapping.MapDocument(r"C:\Users\Hu Fei\Desktop\Data\Test.mxd")
+arcpy.mapping.ExportToGIF(mxd, r"C:\Users\Hu Fei\Desktop\Data\Test.gif")
 #del mxd
 
 #arcpy.mapping.UpdateLayer()

@@ -13,7 +13,7 @@ def Delete_Field( Filename_path, Fieldname_delete ):
 def Update_Field_Value( update_table_path, input_table_path, Join_field_name, Add_field_name ):
 	  #添加字段值
     #打开要添加的数据源
-    reader = csv.reader(open('C:\Users\Administrator\Desktop\data1.csv'),dialect = 'excel')
+    reader = csv.reader(open('C:\Users\Hu Fei\Desktop\Data\data1.csv'),dialect = 'excel')
     #将数据.csv转入对应的列表中
     Array_Old = []
     Array_new = []
